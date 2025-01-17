@@ -2,6 +2,9 @@ import pandas as pd
 import numpy as np
 import torch
 
+pd.set_option('display.max_columns', None)  
+pd.set_option('display.width', None)        
+
 data1 = input('Enter value for R: ')
 data2 = input('Enter value for H: ')
 data3 = input('Enter value for r: ')
@@ -83,7 +86,7 @@ class Net(torch.nn.Module):
           x = self.layer5(x)
           return x
 net = Net(14,1)
-net = torch.load('weights.pth')
+net = torch.load('weights.pth', weights_only=True)
 
 Y_output = net(X_input)
 output = np.power(10, Y_output.view(-1).detach().cpu().numpy())/10000
