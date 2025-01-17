@@ -26,9 +26,12 @@ else:
     column_titles = column_titles.replace(",", " ").split()
 
     df = pd.DataFrame([data_list], columns=column_titles)
-
-    print("input_data：")
+    print("\n")
+    
+    print('**********************************************************')
+    print("input_data: ")
     print(df)
+    print('**********************************************************')
 
 data_norm = df.copy()
 
@@ -38,7 +41,6 @@ log10_cols = ['r', 't', 'mu', 'delta', 'rhoEBC']
 log_cols = ['H', 'phi', 'lambda', 'boundary']
 logn10_cols = ['R', 'sigma']
 logn1000_cols = ['E']
-
 
 for c in log10000_cols:
     data_norm[c] = np.log10(data_norm[c]*10000)
@@ -86,4 +88,6 @@ net = torch.load('weights.pth')
 Y_output = net(X_input)
 output = np.power(10, Y_output.view(-1).detach().cpu().numpy())/10000
 
+print('**********************************************************')
 print('The results is: ', round(float(output[0]),2))
+print('**********************************************************')
