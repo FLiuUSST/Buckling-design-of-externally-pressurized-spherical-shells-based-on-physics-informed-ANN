@@ -1,4 +1,4 @@
-# Buckling-design-of-externally-pressurized-spherical-shells-based-on-physics-informed-ANN
+# Buckling-design-of-externally-pressurized-spherical-shells-based-on-physics-informed-artificial-neural-network
 Codes for the paper entitled "Buckling design of externally pressurized spherical shells based on physics-informed artificial neural network"
 
 
