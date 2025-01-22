@@ -6,36 +6,36 @@ import warnings
 pd.set_option('display.max_columns', None)  
 pd.set_option('display.width', None) 
 
-data1 = input('Enter value for R: ')
-data2 = input('Enter value for H: ')
-data3 = input('Enter value for r: ')
-data4 = input('Enter value for t: ')
-data5 = input('Enter value for phi: ')
-data6 = input('Enter value for lambda: ')
-data7 = input('Enter value for E: ')
-data8 = input('Enter value for sigma: ')
-data9 = input('Enter value for mu: ')
-data10 = input('Enter value for delta: ')
-data11 = input('Enter value for boundary: ')
-data12 = input('Enter value for EAB: ')
-data13 = input('Enter value for rhoEBC: ')
-data14 = input('Enter value for PEBC: ')
+data1 = input('Enter value for radius (R/mm): ')
+data2 = input('Enter value for height (H/mm) : ')
+data3 = input('Enter value for base radius (r/mm): ')
+data4 = input('Enter value for thickness (t/mm): ')
+data5 = input('Enter value for angle (Phi/°): ')
+data6 = input('Enter value for shell shape parameter (Lambda): ')
+data7 = input('Enter value for Young\'s modulus (E/MPa): ')
+data8 = input('Enter value for yielding strength (Sigmay/MPA): ')
+data9 = input('Enter value for Poisson\'s ratio (Upsilon): ')
+data10 = input('Enter value for normalized maximum thickness variation (Delta/%): ')
+data11 = input('Enter value for boundary condition (Boundary/1-bad;2-good): ')
+data12 = input('Enter value for energy barrier (EAB/mJ): ')
+data13 = input('Enter value for EBC-based KDF (rhoEBC): ')
+data14 = input('Enter value for EBC-based buckling pressure (PEBC/MPa): ')
 
 data_list = [float(data1), float(data2), float(data3), float(data4), float(data5), float(data6), float(data7), float(data8), float(data9), float(data10), float(data11), float(data12), float(data13), float(data14)]
 
 if len(data_list) != 14:
     print("input should contain 14 elements")
 else:
-    column_titles = "R, H, r, t, phi, lambda, E, sigma, mu, delta, boundary, EAB, rhoEBC, PEBC"
+    column_titles = "R, H, r, t, Phi, Lambda, E, Sigmay, Upsilon, Delta, Boundary, EAB, rhoEBC, PEBC"
     column_titles = column_titles.replace(",", " ").split()
 
     df = pd.DataFrame([data_list], columns=column_titles)
     print("\n")
     
-    print('**********************************************************')
+    print('********************************************************************************************************************')
     print("input_data: ")
     print(df)
-    print('**********************************************************')
+    print('********************************************************************************************************************')
 
 data_norm = df.copy()
 
