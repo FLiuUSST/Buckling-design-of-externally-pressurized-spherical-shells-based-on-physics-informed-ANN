@@ -12,10 +12,10 @@ data3 = input('Enter value for base radius (r/mm): ')
 data4 = input('Enter value for thickness (t/mm): ')
 data5 = input('Enter value for angle (Phi/°): ')
 data6 = input('Enter value for shell shape parameter (Lambda): ')
-data7 = input('Enter value for Young\'s modulus (E/MPa): ')
+data7 = input('Enter value for young\'s modulus (E/MPa): ')
 data8 = input('Enter value for yielding strength (Sigmay/MPA): ')
-data9 = input('Enter value for Poisson\'s ratio (Upsilon): ')
-data10 = input('Enter value for normalized maximum thickness variation (Delta/%): ')
+data9 = input('Enter value for poisson\'s ratio (Upsilon): ')
+data10 = input('Enter value for normalised maximum thickness variation (Delta/%): ')
 data11 = input('Enter value for boundary condition (Boundary/1-bad;10-good): ')
 data12 = input('Enter value for energy barrier (EAB/mJ): ')
 data13 = input('Enter value for EBC-based KDF (rhoEBC): ')
@@ -32,10 +32,10 @@ else:
     df = pd.DataFrame([data_list], columns=column_titles)
     print("\n")
     
-    print('********************************************************************************************************************')
+    print('**************************************************************************************************************')
     print("input_data: ")
     print(df)
-    print('********************************************************************************************************************')
+    print('**************************************************************************************************************')
 
 data_norm = df.copy()
 
@@ -95,5 +95,5 @@ Y_output = net(X_input)
 output = np.power(10, Y_output.view(-1).detach().cpu().numpy())/10000
 
 print('**********************************************************')
-print('The results is: ', round(float(output[0]),2))
+print(f'The predicted buckling pressure is: {round(float(output[0]), 2)} MPa')
 print('**********************************************************')
