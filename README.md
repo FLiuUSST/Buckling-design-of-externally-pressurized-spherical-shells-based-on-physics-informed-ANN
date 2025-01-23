@@ -6,4 +6,4 @@ Demonstration can be found in Colab
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1OFk1yEgSOb-XuLKmE9ISbZ3OIy_v0N40?usp=sharing)
 
-![Image](demo.png)
+![Image](demo_cloab.png)
