@@ -16,7 +16,7 @@ data7 = input('Enter value for young\'s modulus (E/MPa): ')
 data8 = input('Enter value for yielding strength (Sigmay/MPa): ')
 data9 = input('Enter value for poisson\'s ratio (Upsilon): ')
 data10 = input('Enter value for normalised maximum thickness variation (Delta/%): ')
-data11 = input('Enter value for boundary condition (Boundary/1-bad;10-good): ')
+data11 = input('Enter value for boundary condition (Boundary/0-bad;1-good): ')
 data12 = input('Enter value for energy barrier (EAB/mJ): ')
 data13 = input('Enter value for EBC-based KDF (rhoEBC): ')
 data14 = input('Enter value for EBC-based buckling pressure (PEBC/MPa): ')
@@ -42,7 +42,7 @@ data_norm = df.copy()
 log10000_cols = ['PEBC']
 log100_cols = [ 'EAB']
 log10_cols = ['r', 't', 'Upsilon', 'Delta', 'rhoEBC']
-log_cols = ['H', 'Phi', 'Lambda', 'Boundary']
+log_cols = ['H', 'Phi', 'Lambda']
 logn10_cols = ['R', 'Sigmay']
 logn1000_cols = ['E']
 
